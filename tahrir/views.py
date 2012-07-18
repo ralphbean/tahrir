@@ -1,4 +1,4 @@
-import Metrology
+import metrology
 import transaction
 import types
 
@@ -22,14 +22,14 @@ import tahrir_api.model as m
 import widgets
 
 #  Metrics definitions
-reporter = Metrology.GraphiteReporter('graphite.local', 2003)
+reporter = metrology.reporter.grahite.GraphiteReporter('graphite.local', 2003)
 reporter.start()
-page_view_meter = Metrology.meter('page-views')
-admin_view_timer = Metrology.timer('admin-view-timer')
-login_view_timer = Metrology.timer('login-view-timer')
-logout_view_timer = Metrology.timer('logout-view-timer')
-openid_cb_timer = Metrology.timer('openid-cb-timer')
-index_view_timer = Metrology.timer('index-view-timer')
+page_view_meter = metrology.instruments.meter('page-views')
+admin_view_timer = metrology.instruments.timer('admin-view-timer')
+login_view_timer = metrology.instruments.timer('login-view-timer')
+logout_view_timer = metrology.instruments.timer('logout-view-timer')
+openid_cb_timer = metrology.instruments.timer('openid-cb-timer')
+index_view_timer = metrology.instruments.timer('index-view-timer')
 
 
 # TODO -- really wield tw2.sqla here
