@@ -22,7 +22,7 @@ import tahrir_api.model as m
 import widgets
 
 #  Metrics definitions
-reporter = metrology.reporter.grahite.GraphiteReporter('graphite.local', 2003)
+reporter = metrology.reporter.graphite.GraphiteReporter('graphite.local', 2003)
 reporter.start()
 page_view_meter = metrology.instruments.meter('page-views')
 admin_view_timer = metrology.instruments.timer('admin-view-timer')
