@@ -24,7 +24,7 @@ import tahrir_api.model as m
 import widgets
 
 #  Metrics definitions
-reporter = GraphiteReporter('graphite.local', 2003)
+reporter = GraphiteReporter('localhost', 2003)
 reporter.start()
 page_view_meter = Metrology.meter('page-views')
 admin_view_timer = Metrology.timer('admin-view-timer')
