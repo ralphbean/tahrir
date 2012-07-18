@@ -6,6 +6,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 README = open(os.path.join(here, 'README.rst')).read()
 
 requires = [
+    'metrology',
     'pyramid',
     'pyramid_openid',
     'tahrir_api >= 0.1.4.0',
